@@ -31,12 +31,9 @@ const PORT = process.env.PORT || 5000;
 
 
 // connecting the db
-const options = {
-  ssl: false,
-};
 
 mongoose
-  .connect(dbURL, options)
+  .connect(dbURL)
   .then((result) => {
     app.listen(PORT);
     console.log("Connected Successfully");
