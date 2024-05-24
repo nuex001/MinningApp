@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poetsen+One&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --bg: #292929;
+  --primary: #757575;
+  --text: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 10px;
+  font-family: "Orbitron", sans-serif;
+  background: var(--bg);
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav.desktop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2em 4em;
+}
+nav.desktop a {
+  font-size: 2em;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+nav.mobile {
+  display: none;
+}
+
+/* MOBILE RESPONSIVNESS */
+@media (max-width: 768px) {
+  nav.desktop {
+    padding: 2em 2em;
+  }
+}
