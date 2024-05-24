@@ -31,7 +31,7 @@ router.post("/", auth, async (req, res) => {
       return res.json({ msg: "Yoo mining Just started🤭" });
     }
     if (user.claimed) {
-      return res.json({ msg: "Sorry No mining going on, Already claimed" });
+      return res.status(400).json({ msg: "Sorry No mining going on, Already claimed" });
     }
 
     // Calculate total hours for current date and last mining date
