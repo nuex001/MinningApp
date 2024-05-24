@@ -41,7 +41,7 @@ router.post("/", async (req, res) => {
       jwt: token,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error.message);
     if (error.message.includes("email has already been taken")) {
       res.status(500).json({ err: "email has already been taken" });
     } else {
