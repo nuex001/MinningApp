@@ -62,6 +62,7 @@ function Points() {
         className={`icon ${info && info.includes("Mining") ? "active" : ""}`}
       />
       <h4>{data && data.point}</h4>
+      <p>Note:  Mining lasts for 6 hours and then you can claim</p>
       <button onClick={MineOrClaim}>{info ? info : "Loading"}</button>
       <button onClick={fetchUser}>Refresh Pionts</button>
     </>
